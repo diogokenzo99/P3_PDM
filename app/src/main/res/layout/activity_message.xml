@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="8"
+    tools:context=".MainActivity">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_rowSpan="1"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:columnCount="2"
+        android:rowCount="2"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="374dp"
+        android:layout_column="0"
+        android:layout_columnSpan="2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mensagensRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            app:reverseLayout="true"
+            app:stackFromEnd="true" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_rowSpan="1"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <EditText
+            android:id="@+id/mensagemEditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_horizontal" />
+
+        <Button
+            android:id="@+id/enviarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_row="1"
+            android:layout_column="1"/>
+
+    </GridLayout>
+
+</GridLayout>
